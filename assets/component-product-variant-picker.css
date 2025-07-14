@@ -1,0 +1,247 @@
+variant-selects {
+  display: block;
+}
+
+.product--no-media .product-form__input--pill,
+.product--no-media .product-form__input--swatch,
+.product--no-media .product-form__input--dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product--no-media .product-form__input.product-form__input--pill,
+.product--no-media .product-form__input.product-form__input--swatch {
+  flex-wrap: wrap;
+  margin: 0 auto 1.2rem auto;
+}
+
+.product--no-media .product-form__input--dropdown {
+  flex-direction: column;
+  max-width: 100%;
+}
+
+:is(.product-form__input--pill, .product-form__input--swatch) .form__label {
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.product-form__input input[type='radio'] {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+.product-form__input input[type='radio']:not(.disabled):not(.visually-disabled) + label > .label-unavailable {
+  display: none;
+}
+
+.product-form__input--dropdown {
+  --swatch-input--size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.product-form__input--dropdown .dropdown-swatch + select {
+  padding-left: calc(2.4rem + var(--swatch-input--size));
+}
+
+.product-form__input--dropdown .dropdown-swatch {
+  position: absolute;
+  left: 1.6rem;
+  top: calc(50% - var(--swatch-input--size) / 2);
+  width: var(--swatch-input--size);
+  height: var(--swatch-input--size);
+  z-index: 1;
+}
+
+/* Custom styles for Pill display type - Black Glass Morphism */
+.product-form__input--pill input[type='radio'] + label {
+  /* Glass morphism base */
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
+              0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  line-height: 1.2;
+  text-align: center;
+  
+  /* Layout */
+  display: inline-block;
+  margin: 0.7rem 0.5rem 0.2rem 0;
+  padding: 1.2rem 2.4rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-form__input--pill input[type='radio'] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(0, 0, 0, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 25%, 
+    rgba(0, 0, 0, 0.1) 50%, 
+    rgba(255, 255, 255, 0.05) 75%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  background-size: 400% 400%;
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  animation: subtleGlow 6s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+
+    .product-form__input--pill input[type='radio'] + label:hover {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15),
+                0 8px 25px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+.product-form__input--pill input[type='radio'] + label:hover:before {
+  opacity: 1;
+}
+
+  .product-form__input--pill input[type='radio']:checked + label {
+    /* Selected glass morphism */
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
+                0 12px 35px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+.product-form__input--pill input[type='radio']:checked + label:before {
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 25%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0.05) 75%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  opacity: 1;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .product-form__input--pill input[type='radio']:checked + label {
+    text-decoration: underline;
+  }
+
+  .product-form__input--pill input[type='radio']:focus-visible + label {
+    outline: transparent solid 1px;
+    outline-offset: 2px;
+  }
+}
+
+.product-form__input--pill input[type='radio']:checked + label::selection {
+  background-color: rgba(var(--color-background), 0.3);
+}
+
+.product-form__input--pill input[type='radio']:disabled + label,
+.product-form__input--pill input[type='radio'].disabled + label {
+  border-color: rgba(var(--color-foreground), 0.1);
+  color: rgba(var(--color-foreground), 0.6);
+  text-decoration: line-through;
+}
+
+.product-form__input--pill input[type='radio'].disabled:checked + label,
+.product-form__input--pill input[type='radio']:disabled:checked + label {
+  color: rgba(var(--color-background), 0.6);
+}
+.product-form__input--pill input[type='radio']:focus-visible + label {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
+}
+
+/* Fallback */
+.product-form__input--pill input[type='radio'].focused + label {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
+}
+
+/* Custom styles for Swatch display type */
+.product-form__input--swatch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-form__input--swatch .swatch-input__input + .swatch-input__label {
+  --swatch-input--size: 3.6rem;
+
+  margin: 0.7rem 1.2rem 0.2rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .product-form__input--swatch .swatch-input__input + .swatch-input__label {
+    --swatch-input--size: 2.8rem;
+  }
+}
+/* End custom styles for Swatch display type */
+
+/* Variant inventory count styling - Dark Glass Morphism */
+.variant-inventory-count {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.product-form__input--pill input[type='radio']:checked + label .variant-inventory-count {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+.variant-inventory-count--sold-out {
+  color: #ff6b6b !important;
+  opacity: 0.9 !important;
+}
+
+.product-form__input--pill input[type='radio']:checked + label .variant-inventory-count--sold-out {
+  color: #ff8a8a !important;
+  opacity: 1 !important;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 749px) {
+  .variant-inventory-count {
+    font-size: 1.1rem;
+    margin-left: 0.6rem;
+    padding: 0.1rem 0.5rem;
+  }
+}

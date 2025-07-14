@@ -1,0 +1,172 @@
+.rich-text {
+  z-index: 1;
+}
+
+.rich-text__wrapper {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 4rem / var(--font-body-scale));
+}
+
+.rich-text:not(.rich-text--full-width) .rich-text__wrapper {
+  margin: auto;
+  width: calc(100% - 8rem / var(--font-body-scale));
+}
+
+.rich-text__blocks {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text__wrapper {
+    width: 100%;
+  }
+
+  .rich-text__wrapper--left {
+    justify-content: flex-start;
+  }
+
+  .rich-text__wrapper--right {
+    justify-content: flex-end;
+  }
+
+  .rich-text__blocks {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .rich-text__blocks {
+    max-width: 78rem;
+  }
+}
+
+.rich-text__blocks * {
+  overflow-wrap: break-word;
+}
+
+.rich-text__blocks > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.rich-text__blocks > * + * {
+  margin-top: 2rem;
+}
+
+.rich-text__blocks > * + a {
+  margin-top: 3rem;
+}
+
+.rich-text__buttons {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 45rem;
+  word-break: break-word;
+}
+
+.rich-text__buttons--multiple > * {
+  flex-grow: 1;
+  min-width: 22rem;
+}
+
+.rich-text__buttons + .rich-text__buttons {
+  margin-top: 1rem;
+}
+
+.rich-text__blocks.left .rich-text__buttons {
+  justify-content: flex-start;
+}
+
+.rich-text__blocks.right .rich-text__buttons {
+  justify-content: flex-end;
+}
+
+/* Enhanced styling for Rich Text lists - better mobile readability */
+.rich-text__text ul,
+.rich-text__text ol {
+  padding-left: 0;
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.rich-text__text li {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 0.75rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.rich-text__text li::before {
+  content: '✓';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+.rich-text__text li {
+  padding-left: 3rem;
+}
+
+.rich-text__text li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile specific improvements */
+@media screen and (max-width: 749px) {
+  .rich-text__text li {
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  
+  .rich-text__text li::before {
+    left: 0.875rem;
+    font-size: 1rem;
+  }
+  
+  .rich-text__text ul,
+  .rich-text__text ol {
+    margin: 1rem 0;
+  }
+}
+
+/* Force Satoshi Bold on Rich Text headings with maximum specificity */
+.rich-text__heading,
+.rich-text .rich-text__heading,
+.rich-text__heading.rte,
+.rich-text__heading.inline-richtext,
+h2.rich-text__heading,
+h1.rich-text__heading,
+h3.rich-text__heading,
+.rich-text h1,
+.rich-text h2,
+.rich-text h3,
+.rich-text h4,
+.rich-text h5,
+.rich-text h6 {
+  font-family: 'Satoshi', sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}

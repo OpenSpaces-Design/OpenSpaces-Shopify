@@ -1,0 +1,130 @@
+{{ 'component-promo-timer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'promo-timer.js' | asset_url }}" defer="defer"></script>
+
+<promo-timer class="promo-timer color-{{ section.settings.color_scheme }} gradient" data-section-id="{{ section.id }}" data-section-type="promo-timer" data-klaviyo-form-id="{{ section.settings.klaviyo_form_id }}">
+  {%- if section.settings.enable_promo_bar -%}
+    <div class="page-width">
+      <div class="promo-timer__content">
+        {%- if section.settings.promo_text != blank -%}
+          <div class="promo-timer__text">
+            {{ section.settings.promo_text }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.countdown_enabled -%}
+          <div class="promo-timer__countdown" 
+               data-use-auto-countdown="{{ section.settings.use_auto_countdown }}"
+               data-manual-end-datetime="{{ section.settings.manual_end_datetime }}"
+               data-timer-color="{{ section.settings.timer_color }}">
+            <div class="promo-timer__countdown-inner">
+              <span class="promo-timer__days">00</span>d
+              <span class="promo-timer__hours">00</span>h
+              <span class="promo-timer__minutes">00</span>m
+              <span class="promo-timer__seconds">00</span>s
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.cta_text != blank and section.settings.cta_url != blank -%}
+          <a href="{{ section.settings.cta_url }}" class="promo-timer__cta button">
+            {{ section.settings.cta_text }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+</promo-timer>
+
+{% schema %}
+{
+  "name": "Promo Timer",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_promo_bar",
+      "label": "Enable promo bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "use_auto_countdown",
+      "label": "Use 7-day visitor countdown",
+      "info": "If disabled, will use manual end date",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "manual_end_datetime",
+      "label": "End date and time",
+      "info": "Only used when 7-day countdown is disabled. Format: YYYY-MM-DD HH:mm:ss"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promo text",
+      "default": "Limited time offer!"
+    },
+    {
+      "type": "checkbox",
+      "id": "countdown_enabled",
+      "label": "Show countdown",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "timer_color",
+      "label": "Timer color",
+      "default": "#FF0000"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_form_id",
+      "label": "Klaviyo form ID",
+      "default": "Wyf6hq",
+      "info": "ID of the Klaviyo onsite form to open when the promo bar is clicked."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo Timer",
+      "settings": {
+        "enable_promo_bar": true,
+        "use_auto_countdown": true,
+        "promo_text": "Limited time offer!",
+        "countdown_enabled": true,
+        "cta_text": "Shop Now",
+        "klaviyo_form_id": "Wyf6hq"
+      }
+    }
+  ]
+}
+{% endschema %} 

@@ -1,0 +1,553 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "trustreviews_star_rating_Lq9kEb": {
+          "type": "shopify:\/\/apps\/trustreviews\/blocks\/star_rating\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}",
+            "hide_on_no_reviews": false,
+            "enable_jsonld": false,
+            "starsize": 16,
+            "addtional_text": ""
+          }
+        },
+        "klaviyo_reviews_average_rating_pVA4XL": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/average-rating\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "product-rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_DYxy8j": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .logo-slider-section {\n    max-width: 420px;\n    margin: 2rem 0 1.5rem 0;\n    padding-left: 0.5rem;\n    text-align: left;\n  }\n\n  .logo-slider-section h2 {\n    font-size: 1.75rem;\n    margin-bottom: 0.75rem;\n    color: #fff;\n    text-transform: none;\n    letter-spacing: 0.5px;\n  }\n\n  .logo-marquee-wrapper {\n    overflow: hidden;\n    position: relative;\n    width: 100%;\n  }\n\n  .logo-marquee-track {\n    display: flex;\n    gap: 3rem;\n    animation: scrollMarquee 30s linear infinite;\n    align-items: center;\n    will-change: transform;\n  }\n\n  .logo-marquee-wrapper:hover .logo-marquee-track {\n    animation-play-state: paused;\n  }\n\n  .logo-marquee-track img {\n    max-width: 100px;\n    max-height: 60px;\n    object-fit: contain;\n    opacity: 0.8;\n    transition: opacity 0.3s ease;\n  }\n\n  .logo-marquee-track img:hover {\n    opacity: 1;\n  }\n\n  @keyframes scrollMarquee {\n    0% {\n      transform: translateX(0%);\n    }\n    100% {\n      transform: translateX(-50%);\n    }\n  }\n\n  \/* Responsive logo sizing *\/\n  @media (max-width: 768px) {\n    .logo-marquee-track {\n      gap: 1.5rem;\n    }\n\n    .logo-marquee-track img {\n      max-width: 75px;\n      max-height: 40px;\n    }\n\n    .logo-slider-section h2 {\n      font-size: 1.3rem;\n    }\n  }\n<\/style>\n\n<div class=\"logo-slider-section\">\n  <h2>Trusted By 5000+ Brands<\/h2>\n\n  <div class=\"logo-marquee-wrapper\">\n    <div class=\"logo-marquee-track\">\n      <!-- Repeat logos twice for seamless loop -->\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/SUPERLINE_WHOLESALE_LOGO__copy_30c6df36-f41a-4784-8cd1-84d13c19ee3c.webp?v=1744924768\" alt=\"Logo 1\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e40401f75f133236bfd387_Dreamville_c405b83a-4aae-4dc5-a6c7-d1af19b29bac.png?v=1744924396\" alt=\"Logo 2\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Trapstar_Logo3.png?v=1744947752\" alt=\"Logo 3\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e403ae69c02bd90f54ea5e_empire.png?v=1744925003\" alt=\"Logo 4\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e4058dcd127654add9c07e_star_logo_w__circle_2.png?v=1744931223\" alt=\"Logo 5\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Sonda_logo.png?v=1744940113\" alt=\"Logo 6\">\n\n      <!-- Duplicated for smooth loop -->\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/SUPERLINE_WHOLESALE_LOGO__copy_30c6df36-f41a-4784-8cd1-84d13c19ee3c.webp?v=1744924768\" alt=\"Logo 1\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e40401f75f133236bfd387_Dreamville_c405b83a-4aae-4dc5-a6c7-d1af19b29bac.png?v=1744924396\" alt=\"Logo 2\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Trapstar_Logo3.png?v=1744947752\" alt=\"Logo 3\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e403ae69c02bd90f54ea5e_empire.png?v=1744925003\" alt=\"Logo 4\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/65e4058dcd127654add9c07e_star_logo_w__circle_2.png?v=1744931223\" alt=\"Logo 5\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Sonda_logo.png?v=1744940113\" alt=\"Logo 6\">\n    <\/div>\n  <\/div>\n<\/div>"
+          }
+        },
+        "countdown_timer_essential_app_block_Rqw3qV": {
+          "type": "shopify:\/\/apps\/countdown-timer-essential\/blocks\/app-block\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm5y4foqh002w8dshxbjykyge"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_cRUNN8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Basic Tracking Info",
+            "visibility_tag": "Ad-Tracking",
+            "icon": "question_mark",
+            "content": "<p><strong>Turnaround Time: 2-3 business days<\/strong><br\/><br\/>Our basic package gives <em><strong>Pageview tracking<\/strong><\/em>. This data is captured in your Meta ads manager and allows for retargeting site visitors & more<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_qFNdaa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Basic Tracking Info",
+            "visibility_tag": "TikTok",
+            "icon": "check_mark",
+            "content": "<p><strong>Turnaround Time: 2-3 business days<\/strong><br\/><br\/>Our basic package gives <em><strong>Pageview tracking<\/strong><\/em>. This data is captured in your TikTok ads manager and allows for retargeting site visitors & more<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pVLMkW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Enhanced Tracking Info",
+            "visibility_tag": "Ad-Tracking",
+            "icon": "question_mark",
+            "content": "<p><strong>Turnaround Time: 3-4 business days<\/strong><br\/><br\/>Our enhanced package gives <em><strong>Pageview, Add To Cart, Checkout, and Purchase tracking<\/strong><\/em>. This data is captured in your Meta ads manager and improves the targeting of your ads automatically, create lookalike audiences, and more.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TJ77Vt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Enhanced Tracking Info",
+            "visibility_tag": "TikTok",
+            "icon": "check_mark",
+            "content": "<p><strong>Turnaround Time: 3-4 business days<\/strong><br\/><br\/>Our enhanced package gives <em><strong>Pageview, Add To Cart, Checkout, and Purchase tracking<\/strong><\/em>. This data is captured in your TikTok ads manager and improves the targeting of your ads automatically, create lookalike audiences, and more.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XT6KMz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Advanced Tracking Info",
+            "visibility_tag": "Ad-Tracking",
+            "icon": "question_mark",
+            "content": "<p><strong>Turnaround Time: 3-4 business days<\/strong><br\/><br\/>Our advanced package gives <em><strong>Pageview, Add To Cart, Checkout, and Purchase tracking with both the Pixel and Openspaces Conversions API<\/strong><\/em><\/p><p>Using the Conversions API is a cleaner and more accurate way of tracking all data, and boosting ad performance as a result. <br\/><br\/><strong>You can expect to see an average of 20% more purchases, and 15% lower Costs.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_rxrH4y": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "View Demos",
+            "visibility_tag": "PJ",
+            "icon": "star",
+            "content": "<p><a href=\"https:\/\/demo3.plain-jane-lite.com\" target=\"_blank\" title=\"https:\/\/demo3.plain-jane-lite.com\">Demo1 (Alyx)<\/a><\/p><p><a href=\"https:\/\/gentle-monster-os.myshopify.com\" target=\"_blank\" title=\"https:\/\/gentle-monster-os.myshopify.com\">Demo2(Gentle Monster)<\/a><\/p><p><a href=\"https:\/\/aime-leon-dore-os.myshopify.com\" target=\"_blank\" title=\"https:\/\/aime-leon-dore-os.myshopify.com\">Demo3(Aime Leon Dore)<\/a><\/p><p><a href=\"https:\/\/sporty-and-rich.myshopify.com\" target=\"_blank\" title=\"https:\/\/sporty-and-rich.myshopify.com\">Demo4(Sporty & Rich)<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_t7jxxa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Requirements",
+            "visibility_tag": "Theme",
+            "icon": "check_mark",
+            "content": "{{ product.metafields.custom.theme_requirements | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_8bqejA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Install Guide",
+            "visibility_tag": "Theme",
+            "icon": "silhouette",
+            "content": "{{ product.metafields.custom.self_install | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_cVjk7J": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Refund & Terms",
+            "visibility_tag": "All",
+            "icon": "price_tag",
+            "content": "<p>{{ product.metafields.custom[\"100_money_back_guarentee\"] | metafield_tag }}<\/p><p>View our full refund policy <a href=\"https:\/\/www.openspaces.design\/policies\/refunds\" target=\"_blank\" title=\"https:\/\/www.openspaces.design\/policies\/refunds\">here<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_ATWAGW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Support",
+            "visibility_tag": "All",
+            "icon": "chat_bubble",
+            "content": "{{ product.metafields.custom.get_support | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_QidqKp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About Standard License",
+            "visibility_tag": "Theme",
+            "icon": "question_mark",
+            "content": "<p>{{ product.metafields.custom.about_1_year_license | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_xTYdey": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About Extended License",
+            "visibility_tag": "Theme",
+            "icon": "question_mark",
+            "content": "<p>{{ product.metafields.custom.lifetime_license | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "trustreviews_reviews_widget_HeVaWF": {
+          "type": "shopify:\/\/apps\/trustreviews\/blocks\/reviews_widget\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "trustreviews_star_rating_Lq9kEb",
+        "klaviyo_reviews_average_rating_pVA4XL",
+        "product-rating",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "custom_liquid_DYxy8j",
+        "countdown_timer_essential_app_block_Rqw3qV",
+        "description",
+        "collapsible_tab_cRUNN8",
+        "collapsible_tab_qFNdaa",
+        "collapsible_tab_pVLMkW",
+        "collapsible_tab_TJ77Vt",
+        "collapsible_tab_XT6KMz",
+        "collapsible_tab_rxrH4y",
+        "collapsible_tab_t7jxxa",
+        "collapsible_tab_8bqejA",
+        "collapsible_tab_cVjk7J",
+        "collapsible_tab_ATWAGW",
+        "collapsible_tab_QidqKp",
+        "collapsible_tab_xTYdey",
+        "share",
+        "trustreviews_reviews_widget_HeVaWF"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-2",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_9jTfmB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YQA9jM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theme_update.png",
+            "title": "Free Lifetime Updates",
+            "text": "<p>With a lifetime license you’ll always have access to the latest version of Plain Jane — new features, improvements, and bug fixes at no extra cost.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8riwX4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tech_support.png",
+            "title": "Free Tech Support",
+            "text": "<p>Questions? Bugs? Setup help? We got you. You can reach our team anytime through Discord or email — even if you're not on a paid support plan.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hVPWQc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instant_download.png",
+            "title": "Instant Access",
+            "text": "<p>No waiting around — your download link and license key are sent right after checkout so you can start building immediately.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YQA9jM",
+        "column_8riwX4",
+        "column_hVPWQc"
+      ],
+      "settings": {
+        "visibility_tag": "",
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_bVWWVQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pm9AXX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2025-01-31_at_6.30.12_PM.png",
+            "title": "For Fashion Brands",
+            "text": "<p>An ALYX concept store built using Plain Jane 3.0<\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/demo3.plain-jane-lite.com"
+          }
+        },
+        "column_WXhJXc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2025-01-30_at_4.16.40_PM.png",
+            "title": "For Luxury Brands",
+            "text": "<p>A Aime Leon Dore concept store built with Plain Jane 3.0<\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/aime-leon-dore-os.myshopify.com"
+          }
+        },
+        "column_pkeNKN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2025-01-30_at_4.16.25_PM.png",
+            "title": "For Eyewear & Accessories",
+            "text": "<p>A Gentle Monster concept store built with Plain Jane 3.0<\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/gentle-monster-os.myshopify.com"
+          }
+        },
+        "column_EBkTPx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2025-01-30_at_4.16.53_PM.png",
+            "title": "For Athletic Brands",
+            "text": "<p>A Sporty & Rich concept store built with Plain Jane 3.0<\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/sporty-and-rich-os.myshopify.com"
+          }
+        },
+        "column_3yWMgq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-10-01_at_4.09.05_PM.png",
+            "title": "For Creative Brands",
+            "text": "<p>A live example of a brand using <em><strong>Plain Jane Interactive<\/strong><\/em><\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/ghoshclo.com"
+          }
+        },
+        "column_FFNT3m": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-10-01_at_4.13.08_PM.png",
+            "title": "For Shopify Newbies",
+            "text": "<p>A Supreme style concept store made with Plain Jane Starter. Great for newbies on a budget and need minimal features<\/p>",
+            "link_label": "View Demo",
+            "link": "https:\/\/plain-jane-starter.myshopify.com"
+          }
+        }
+      },
+      "block_order": [
+        "column_pm9AXX",
+        "column_WXhJXc",
+        "column_pkeNKN",
+        "column_EBkTPx",
+        "column_3yWMgq",
+        "column_FFNT3m"
+      ],
+      "settings": {
+        "visibility_tag": "",
+        "title": "Try Our Theme Demos",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "https:\/\/openspaces-labs.notion.site\/Our-Favorite-Stores-b214f1a173af478da4a26a4e906de7a9",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_CcjzMJ": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_1.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1733951084ef5f2947": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_product_reviews_TCUjfY": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/product-reviews\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_product_reviews_TCUjfY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_c9Bd6X": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\n.demo-grid-section h2 {\n  color: #fff;\n  font-size: 1.8rem;\n  margin-bottom: 0.5rem;\n}\n\n.demo-grid-subtitle {\n  font-size: 1.1rem;\n  color: #aaa;\n  margin-bottom: 2rem;\n}\n\n.demo-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n  gap: 2rem;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n\n.demo-card {\n  background: #111;\n  border: 1px solid #333;\n  border-radius: 10px;\n  overflow: hidden;\n  text-align: left;\n  transition: all 0.25s ease;\n  cursor: pointer;\n}\n\n.demo-card:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);\n}\n\n.demo-card img {\n  width: 100%;\n  height: 260px;\n  object-fit: cover;\n  display: block;\n}\n\n.demo-content {\n  padding: 1.25rem;\n}\n\n.demo-content h3 {\n  margin: 0 0 0.5rem;\n  font-size: 1.5rem;\n  color: #fff;\n}\n\n.demo-content h3 a {\n  color: inherit;\n  text-decoration: none;\n}\n\n.demo-content h3 a:hover {\n  text-decoration: underline;\n}\n\n.demo-description {\n  font-size: 1.1rem;\n  color: #aaa;\n  margin-bottom: 0.8rem;\n}\n\n.demo-link {\n  color: #f5a;\n  font-size: 1.1rem;\n  text-decoration: underline;\n}\n\n.demo-link:hover {\n  text-decoration: none;\n}\n\n<\/style>\n\n<div class=\"demo-grid-section\">\n  <h2>Try Our Theme Demos<\/h2>\n  <div class=\"demo-grid-subtitle\">See how real brands are using Plain Jane<\/div>\n\n  <div class=\"demo-grid\">\n\n    <!-- Card 1 -->\n    <div class=\"demo-card\" onclick=\"window.open('https:\/\/demo3.plain-jane-lite.com\/', '_blank')\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Screenshot_2025-01-31_at_6.30.12_PM.png?v=1738366229\">\n      <div class=\"demo-content\">\n        <h3><a href=\"https:\/\/demo3.plain-jane-lite.com\/\" target=\"_blank\">For Fashion Brands<\/a><\/h3>\n        <div class=\"demo-description\">An ALYX concept store built using Plain Jane 3.0<\/div>\n        <a class=\"demo-link\" href=\"https:\/\/demo3.plain-jane-lite.com\/\" target=\"_blank\">View Demo →<\/a>\n      <\/div>\n    <\/div>\n\n    <!-- Card 2 -->\n    <div class=\"demo-card\" onclick=\"window.open('https:\/\/aime-leon-dore-os.myshopify.com\/', '_blank')\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Screenshot_2025-01-30_at_4.16.40_PM.png?v=1738366300\" alt=\"ALD Demo\">\n      <div class=\"demo-content\">\n        <h3><a href=\"https:\/\/aime-leon-dore-os.myshopify.com\/\" target=\"_blank\">For Luxury Brands<\/a><\/h3>\n        <div class=\"demo-description\">An Aime Leon Dore concept store built with Plain Jane 3.0<\/div>\n        <a class=\"demo-link\" href=\"https:\/\/aime-leon-dore-os.myshopify.com\/\" target=\"_blank\">View Demo →<\/a>\n      <\/div>\n    <\/div>\n\n    <!-- Card 3 -->\n    <div class=\"demo-card\" onclick=\"window.open('https:\/\/gentle-monster-os.myshopify.com\/', '_blank')\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Screenshot_2025-01-30_at_4.16.25_PM.png?v=1738366380\" alt=\"Gentle Monster Demo\">\n      <div class=\"demo-content\">\n        <h3><a href=\"https:\/\/gentle-monster-os.myshopify.com\/\" target=\"_blank\">For Eyewear & Accessories<\/a><\/h3>\n        <div class=\"demo-description\">A Gentle Monster concept store built with Plain Jane 3.0<\/div>\n        <a class=\"demo-link\" href=\"https:\/\/gentle-monster-os.myshopify.com\/\" target=\"_blank\">View Demo →<\/a>\n      <\/div>\n    <\/div>\n\n    <!-- Card 4 -->\n    <div class=\"demo-card\" onclick=\"window.open('https:\/\/sporty-and-rich.myshopify.com\/', '_blank')\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0734\/5501\/0114\/files\/Screenshot_2025-01-30_at_4.16.53_PM.png?v=1738366672\" alt=\"Sporty & Rich Demo\">\n      <div class=\"demo-content\">\n        <h3><a href=\"https:\/\/sporty-and-rich.myshopify.com\/\" target=\"_blank\">For Athletic Brands<\/a><\/h3>\n        <div class=\"demo-description\">A Sporty & Rich concept store built with Plain Jane 3.0<\/div>\n        <a class=\"demo-link\" href=\"https:\/\/sporty-and-rich.myshopify.com\/\" target=\"_blank\">View Demo →<\/a>\n      <\/div>\n    <\/div>\n\n  <\/div>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "172759346409ecafd7": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_product_reviews_3zG3qL": {
+          "type": "shopify:\/\/apps\/klaviyo-reviews\/blocks\/product-reviews\/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_product_reviews_3zG3qL"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multirow_nnAVYx": {
+      "type": "multirow",
+      "blocks": {
+        "row_GDb9mV": {
+          "type": "row",
+          "settings": {
+            "image": "{{ product.metafields.custom.highlight_feature_1_image.value }}",
+            "caption": "Highlight Feature #1",
+            "heading": "{{ product.metafields.custom.highlight_feature_1_title.value }}",
+            "text": "<p>{{ product.metafields.custom.highlight_feature_1_content | metafield_tag }}<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_KyBM8p": {
+          "type": "row",
+          "settings": {
+            "image": "{{ product.metafields.custom.highlight_feature_2_image.value }}",
+            "caption": "Highlight Feature #2",
+            "heading": "{{ product.metafields.custom.highlight_feature_2_title.value }}",
+            "text": "<p>{{ product.metafields.custom.highlight_feature_2_content | metafield_tag }}<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_n7mPBJ": {
+          "type": "row",
+          "settings": {
+            "image": "{{ product.metafields.custom.highlight_feature_3_image.value }}",
+            "caption": "Highlight Feature #3",
+            "heading": "{{ product.metafields.custom.highlight_feature_3_title.value }}",
+            "text": "<p>{{ product.metafields.custom.highlight_feature_3_content | metafield_tag }}<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_GDb9mV",
+        "row_KyBM8p",
+        "row_n7mPBJ"
+      ],
+      "settings": {
+        "visibility_tag": "",
+        "image_height": "adapt",
+        "desktop_image_width": "small",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "YOU MAY ALSO LIKE",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-2",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_Y38dbF": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script >\n  window.addEventListener('load', function() {\n  var _learnq = window._learnq || [];\n  function addedToCart() {\n   fetch(`${window.location.origin}\/cart.js`)\n   .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n       _learnq.push(['track', 'Added to Cart', cart]);\n       klAjax = false;\n      }\n   }))\n  };\n  (function (ns, fetch) {\n    ns.fetch = function() {\n      const response = fetch.apply(this, arguments);\n      response.then(res => {\n        if (`${window.location.origin}\/cart\/add.js`\n          .includes(res.url) && res.url !== '') {\n              addedToCart()\n        }\n      });\n      return response\n     }\n  }(window, window.fetch));\n  var klAjax = true;\n  var atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\n  for (var i = 0; i < atcButtons.length; i++) { \n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n  }\n  });\n  <\/script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_9jTfmB",
+    "multicolumn_bVWWVQ",
+    "image_with_text_CcjzMJ",
+    "1733951084ef5f2947",
+    "custom_liquid_c9Bd6X",
+    "172759346409ecafd7",
+    "multirow_nnAVYx",
+    "related-products",
+    "custom_liquid_Y38dbF"
+  ]
+}

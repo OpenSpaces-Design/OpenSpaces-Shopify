@@ -1,0 +1,185 @@
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Design-First Shopify Themes for Lifestyle Brands</p>"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Themes for Streetwear/Fashion, Art, and Lifestyle brands."
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Button 1 Text",
+      "default": "Explore Themes"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Button 2 Text",
+      "default": "$1 Shopify Trial"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_left_image",
+      "label": "Bottom Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_center_image",
+      "label": "Bottom Center Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-logo {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.3125rem;
+    letter-spacing: 0.13125rem;
+    text-transform: uppercase;
+  }
+  .hero-nav {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: 0.1125rem;
+    text-transform: uppercase;
+  }
+  .hero-main {
+    text-align: center;
+    margin: auto 0;
+  }
+  .hero-title {
+    font-family: 'General Sans', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.3rem;
+  }
+  .hero-title span.underline-pink {
+    text-decoration: underline;
+    text-decoration-color: #FFC7DD;
+    text-underline-offset: 0.1em;
+  }
+  .hero-subtitle {
+    font-family: 'General Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .hero-button {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.875rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+  .hero-bottom-left-image {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 2.375rem;
+    width: 3.194rem;
+    height: 3.125rem;
+  }
+  .hero-bottom-center-image {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.4375rem;
+    height: 2.4375rem;
+  }
+</style>
+
+<section class="hero" style="background-image: url('{{ section.settings.background_image | image_url: width: master }}');">
+  <div class="hero-content">
+    <header class="hero-header">
+    </header>
+    <div class="hero-main">
+      <h2 class="hero-title">{{ section.settings.title | replace: 'Lifestyle', '<span class="underline-pink">Lifestyle</span>' }}</h2>
+      <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+      <div class="hero-buttons">
+        <a href="{{ section.settings.button_1_link }}" class="hero-button">{{ section.settings.button_1_text }}</a>
+        <a href="{{ section.settings.button_2_link }}" class="hero-button">{{ section.settings.button_2_text }}</a>
+      </div>
+    </div>
+    {% if section.settings.bottom_left_image %}
+      <img src="{{ section.settings.bottom_left_image | image_url: width: 51 }}" class="hero-bottom-left-image" alt="Bottom Left Image" width="51" height="50">
+    {% endif %}
+    {% if section.settings.bottom_center_image %}
+      <img src="{{ section.settings.bottom_center_image | image_url: width: 39 }}" class="hero-bottom-center-image" alt="Bottom Center Image" width="39" height="39">
+    {% endif %}
+  </div>
+</section> 
